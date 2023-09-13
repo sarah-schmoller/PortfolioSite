@@ -1,0 +1,26 @@
+
+
+/* PAGE BODY */
+
+  /* Generic styles for the page body */
+  #body {
+    overscroll-behavior: contain;
+    position: relative;
+    z-index: 0;
+  }
+
+
+/* INTRO PAGE */
+
+  /* Overarching styles for the intro page */
+  #introPage {
+    background: #171b22;
+    height: 100vh;
+    min-height: 750px;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    z-index: 100;
+  }
+
+
