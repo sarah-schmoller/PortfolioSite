@@ -23,4 +23,177 @@
     z-index: 100;
   }
 
+  /* Container encompassing laptop image and functionality */
+  #laptopLayoutContainer {
+    bottom: 0;
+    display: block;
+    --div-height: calc(max(100vh, 720px));
+    height: var(--div-height);
+    left: 50%;
+    min-height: 750px;
+    min-width: 1072px;
+    position: relative;
+    top: 0;
+    transform: translateX(-50%);
+    width: calc(var(--div-height) * 1.42);
+  }
+  
+  #laptopLayoutLightRadius {
+    background: radial-gradient(ellipse, #6c93b8 0%, rgba(255, 0, 0, 0) 70%);
+    border-radius: 50%;
+    bottom: -69%;
+    height: 150%;
+    left: -30%;
+    margin: auto;
+    position: absolute;
+    transform: rotateX(80deg); 
+    width: 160%;
+    z-index: 0;
+  }
+
+  #laptopLayoutImage {
+    box-sizing: border-box;
+    left: 50%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute; 
+    transform: translateX(-50%);
+  }
+
+  #laptopLayoutTerminal {
+    height: 5%;
+    left: 13.5%;
+    margin: 0;
+    position: absolute;
+    top: 13%;
+    transform: translate(0, -50%);
+    width: 100%;
+  }
+
+  #laptopLayoutTerminal .terminalLine {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 1.5em;
+  }
+
+  #laptopLayoutTerminal .terminalLine:nth-child(n) {
+    margin-top: calc(1.75% * (n - 1));
+  }
+
+  .laptopLayoutTerminalText {
+    position: absolute;
+    z-index: 15;
+    text-align: left;
+    left: 0;
+    font-family:  "Roboto Mono", monospace !important;
+    font-size: 14px;
+    color: rgb(174, 208, 255);
+  }
+
+  .laptopLayoutTerminalText.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.5s steps(30, end) forwards;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  #laptopLayoutButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: clamp(18px, 2.5vh, 36px);
+    height: clamp(40px, 3vh, 60px);
+    min-height: 40px;
+    left: 50%;
+    margin: 0;
+    position: relative;
+    top: 76.75%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: auto;
+    flex: 0;
+    flex-wrap: nowrap;
+    overflow: auto;
+    align-items: stretch;
+  }
+
+  #laptopLayoutButtonContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+
+  #laptopLayoutButtonContainer a img {
+    animation: growAndShrink 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+    box-sizing: border-box;
+    display: block;
+    flex-shrink: 1;
+    height: clamp(24px, 3vh, 40px);
+    max-width: 100%;
+    min-width: 24px;
+    object-fit: contain;
+    transition: transform 0.3s ease-out, opacity 0.8s ease;
+    width: auto;
+  }
+
+  #laptopLayoutButtonContainer img:hover {
+    transform: scale(1.1) !important;
+  }
+
+  #introPageNavArrow {
+    bottom: -5px;
+    display: block;
+    height: 50px;
+    left: 50%;
+    max-height: 45px;
+    min-height: 45px;
+    min-width: 1072px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 110;
+  }
+  
+  #introPageNavArrowLink {
+    height: 50px;
+    width: 50px;
+  }
+
+  .introPageScrollIndicator path {
+    z-index:100;
+    top:0;
+    padding-bottom: 20px;
+    animation: bounce 1.5s infinite;
+    color: black;
+  }
+
+  #laptopLayoutButtonContainer img:nth-child(n) {
+    animation-delay: calc(0.1s + 0.2s * (n - 1));
+  }
+
+  @keyframes growAndShrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  #introPageTab {
+    bottom: -8px;
+    max-width: 57px;
+  }
+
+  .noDisplay {
+    display: none;
+  }
 
