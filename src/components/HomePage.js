@@ -67,6 +67,78 @@ function HomePage() {
           <path d="M0 57C0 57 218.416 0 693.5 0C1168.58 0 1440 57 1440 57H0Z" transform="translate(432, 0) scale(0.4, 1)"></path>
         </svg>
       </div>
+
+
+      {/* INTRO PAGE MOBILE*/}
+      <div id="introPageMobile">
+        <div id="mobileLayoutContainer">
+          <img id="profileImage" src="./profileImage.png" alt="Profile Image"/>
+          <div id="mobileLayoutTitle"><span>Sarah Schmoller</span></div>
+          <div id="mobileLayoutButtonContainer">
+            <a id="aboutButton" class="mobileButton" href="#aboutPage"><img src="./aboutButton.png" alt="About"/></a>
+            <a id="workButton" class="mobileButton" href="#workPageContainer"><img src="./workButton.png" alt="Work"/></a>
+            <a id="contactButton" class="mobileButton" href="#pageFooter"><img src="./contactButton.png" alt="Contact"/></a>
+            <a id="resumeButton" class="mobileButton" href="#resumePage"><img src="./resumeButton.png" alt="Resume"/></a>
+          </div>
+          <div id="messagesTitle"></div>
+          <div id="label">
+            <span>Messages</span>
+          </div>
+          <div id="divider" class="horizontalLine"></div>
+          <div id="mobileLayoutMessageContainer">
+            <a id="mobileLayoutMessageContainerLink" href="#workPageContainer">
+              <div id="profileAndTextWrapper">
+                <img id="profileImageMessage" src="./profileImageMessage.png" alt="Profile Image"/>
+                <div class="messageWrapper">
+                  <div id="senderName">
+                    <span>Sarah Schmoller</span>
+                  </div>
+                  <div id="timestamp">
+                    <span id="currentTime"></span>
+                  </div>
+                  <div id="message">
+                    <span>Hey there! My name is Sarah. I write software that tells stories. Tap here to see my work -></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <svg id="introPageNavArrow" viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <a id="introPageNavArrowLink" href="#aboutPage">
+            <rect x="680" y="0" width="80" height="80" fill="transparent"></rect>     
+            <g class="introPageScrollIndicator" transform="translate(710, 0)">
+              <path d="M6 8L12 16L18 8H6Z" fill="#7a839c"></path>
+            </g>
+          </a>
+        </svg>
+        <svg class="svgWhiteTab" id="introPageTab" viewBox="0 0 1440 57" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <path d="M0 57C0 57 218.416 0 693.5 0C1168.58 0 1440 57 1440 57H0Z" transform="translate(432, 0) scale(0.4, 1)"></path>
+        </svg>
+      </div>
+
+
+      {/* ABOUT PAGE */}
+      <div id="aboutPage">
+        <div id="aboutPageImageContainer">
+          <img id="aboutImage" src="./aboutImage.png" />
+        </div>
+        <div id="aboutPageTextContainer">
+          <div id="aboutTitle" className="titleText">
+            <span>About Me</span>
+          </div>
+          <div id="aboutParagraph" className="paragraphText">
+            <span>Hi! I'm Sarah Schmoller, a software engineer specializing in natural language technologies. My passion lies in creating software that brings written content to life.</span>
+          </div>
+          <div id="aboutParagraph" className="paragraphText">
+            <span>The work I do encompasses a wide range of AI language generation techniques, from rules-engines to LLMs. I am well-versed in AWS's cloud computing, databasing, serverless, and API creation capabilities, allowing me to build out complex natural language generation tools from start to finish. Over the course of my career I've consistently worked with major consumer-facing publications, releasing highly visible automated publishing frameworks, authorial assist tools, audio summaries, and more.  </span>
+          </div>
+          <div id="aboutParagraph" className="paragraphText">
+            <span>I earned my Bachelor's in Computer Science and Linguistics from the University of Minnesota and am currently working at Dow Jones, where I deal in AI-generated news media for MarketWatch, Barrons.com, Newswires, and the Wall Street Journal. In my free time you'll often find me travelling or volunteering with animals.</span>
+          </div>
+        </div>
+      </div>
+
     </body>
   );
 }
