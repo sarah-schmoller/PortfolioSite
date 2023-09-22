@@ -151,6 +151,18 @@ function HomePage() {
           </div>
           <div id="workPageCardLayout">
             <div className="workPageCard">
+              <a className="cardImageWrapper" href="/watchlist-recaps">
+                <img className="cardImage" src="./watchlistRecapCoverImage.jpg" alt="Watchlist Recaps"/>
+              </a>
+              <div>
+                <div id="cardDescription">
+                  <div className='cardTitle'>Watchlist Recaps</div>
+                  <div className="cardText">DOW JONES & CO. [2022-2024]</div>
+                  <div className="cardText">Feature recapping company watchlists with AI narratives</div>
+                </div>
+              </div>
+            </div>
+            <div className="workPageCard">
               <a className="cardImageWrapper" href="/script-assist">
                 <img className="cardImage" src="./scriptAssistCoverImage.jpg" alt="Gen AI ScriptAssist"/>
               </a>
