@@ -139,6 +139,33 @@ function HomePage() {
         </div>
       </div>
 
+      {/* WORK PAGE */}
+      <div id="workPage">
+        <svg class="svgWhiteTab" id="workPageTab" viewBox="0 0 1440 57" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <path d="M0 57C0 57 218.416 0 693.5 0C1168.58 0 1440 57 1440 57H0Z" transform="translate(432, 57) scale(0.4, -1)"></path>
+        </svg>
+        <div id="workPageContainer">
+          <div id="workPageText">
+            <div id="workPageTitle" className="titleText"><span>My Work</span></div>
+            <div id="workPageParagraph" className="paragraphText"><span>As a developer and technical lead, I’ve architected, developed, and deployed products putting AI to a wide range of uses in the media sphere. Here are a few of the projects I’ve been working on lately.</span></div>
+          </div>
+          <div id="workPageCardLayout">
+            <div className="workPageCard">
+              <a className="cardImageWrapper" href="/script-assist">
+                <img className="cardImage" src="./scriptAssistCoverImage.jpg" alt="Gen AI ScriptAssist"/>
+              </a>
+              <div>
+                <div id="cardDescription">
+                  <div className='cardTitle'>Gen AI ScriptAssist</div>
+                  <div className="cardText">XANDRA, INC. [2020]</div>
+                  <div className="cardText">Scriptwriting assistant for Conversation Designers</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </body>
   );
 }
