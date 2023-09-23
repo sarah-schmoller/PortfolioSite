@@ -151,6 +151,19 @@ function HomePage() {
           </div>
           <div id="workPageCardLayout">
             <div className="workPageCard">
+              <a className="cardImageWrapper" href="/automated-publishing">
+                <img className="cardImage" src="./aiPublishingCoverImage.jpg" alt="AI Story Autopublisher"/>
+              </a>
+              <div>
+                <div id="cardDescription">
+                  <div className='cardTitle'>AI Story Autopublisher</div>
+                  <div className="cardText">DOW JONES & CO. [2020-2025]</div>
+                  <div className="cardText">Automated publishing system for AI-authored stories</div>
+                </div>
+              </div>
+            </div>
+            <div className="cardRowBreak" />
+            <div className="workPageCard">
               <a className="cardImageWrapper" href="/marketwatch-on-alexa">
                 <img className="cardImage" src="./alexaCoverImage.jpg" alt="MarketWatch on Alexa"/>
               </a>
