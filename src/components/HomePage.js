@@ -151,6 +151,18 @@ function HomePage() {
           </div>
           <div id="workPageCardLayout">
             <div className="workPageCard">
+              <a className="cardImageWrapper" href="/marketwatch-on-alexa">
+                <img className="cardImage" src="./alexaCoverImage.jpg" alt="MarketWatch on Alexa"/>
+              </a>
+              <div>
+                <div id="cardDescription">
+                  <div className='cardTitle'>MarketWatch on Alexa</div>
+                  <div className="cardText">DOW JONES & CO. [2021-2023]</div>
+                  <div className="cardText">Skill delivering market news, driven by rules-engine AI</div>
+                </div>
+              </div>
+            </div>
+            <div className="workPageCard">
               <a className="cardImageWrapper" href="/watchlist-recaps">
                 <img className="cardImage" src="./watchlistRecapCoverImage.jpg" alt="Watchlist Recaps"/>
               </a>
