@@ -151,6 +151,18 @@ function HomePage() {
           </div>
           <div id="workPageCardLayout">
             <div className="workPageCard">
+              <a className="cardImageWrapper" href="ai-authoring-engine-page.html">
+                <img className="cardImage" src="./engineCoverImage.jpg" alt="AI Authoring Engine"/>
+              </a>
+              <div>
+                <div id="cardDescription">
+                  <div className='cardTitle'>AI Authoring Engine</div>
+                  <div className="cardText">DOW JONES & CO. [2022-2025]</div>
+                  <div className="cardText">Tool for building LLM- and rules-engine AI-based stories</div>
+                </div>
+              </div>
+            </div>
+            <div className="workPageCard">
               <a className="cardImageWrapper" href="/automated-publishing">
                 <img className="cardImage" src="./aiPublishingCoverImage.jpg" alt="AI Story Autopublisher"/>
               </a>
