@@ -523,3 +523,125 @@
     font-size: 20px;
     font-weight: 600;
   }
+
+
+  @media (min-width: 1510px) {
+    .cardRowBreak {
+      flex-basis: 100%;
+      height: 0;
+      margin-bottom: -50px;
+    }
+
+    /* Make first two cards shorter */
+    #workPageCardLayout > .workPageCard:nth-child(1),
+    #workPageCardLayout > .workPageCard:nth-child(2) {
+      aspect-ratio: 542 / 410 !important; /* Shorter card */
+    }
+
+    /* Keep the image as tall as before */
+    #workPageCardLayout > .workPageCard:nth-child(1) .cardImageWrapper,
+    #workPageCardLayout > .workPageCard:nth-child(2) .cardImageWrapper {
+      aspect-ratio: 542 / 470 !important;
+      height: auto !important;
+      max-height: 100% !important;
+    }
+
+    #workPageCardLayout > .workPageCard:nth-child(4),
+    #workPageCardLayout > .workPageCard:nth-child(5),
+    #workPageCardLayout > .workPageCard:nth-child(6) {
+      aspect-ratio: 542 / 470 !important;
+    }
+    #workPageCardLayout > .workPageCard:nth-child(4) .cardImageWrapper
+    #workPageCardLayout > .workPageCard:nth-child(5) .cardImageWrapper
+    #workPageCardLayout > .workPageCard:nth-child(6) .cardImageWrapper {
+      aspect-ratio: 542 / 470 !important;
+      height: auto !important;
+      max-height: 100% !important;
+    }
+  }
+
+  @media (max-width: 1510px) {
+    .cardRowBreak {
+      display: contents;
+      flex-basis: 100%;
+      height: 0;
+      margin-bottom: -100px;
+    }
+
+    #workPageCardLayout {
+      max-width: 1510px !important;
+      justify-content: center !important;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    
+    .workPageCard {
+      flex: 1 1 500px;
+      min-width: 500px;
+      max-width: 600px;
+      width: auto;
+      margin: 0;
+    }
+    
+    #workPageCardLayout > .workPageCard:nth-child(1),
+    #workPageCardLayout > .workPageCard:nth-child(2),
+    #workPageCardLayout > .workPageCard:nth-child(3),
+    #workPageCardLayout > .workPageCard:nth-child(4),
+    #workPageCardLayout > .workPageCard:nth-child(5) {
+      aspect-ratio: 542 / 435 !important;
+    }
+    
+    #workPageCardLayout > .workPageCard:nth-child(1) .cardImageWrapper,
+    #workPageCardLayout > .workPageCard:nth-child(2) .cardImageWrapper,
+    #workPageCardLayout > .workPageCard:nth-child(3) .cardImageWrapper,
+    #workPageCardLayout > .workPageCard:nth-child(4) .cardImageWrapper,
+    #workPageCardLayout > .workPageCard:nth-child(5) .cardImageWrapper  {
+      aspect-ratio: 542 / 435 !important;
+      height: auto !important;
+      max-height: 100% !important;
+    }
+
+  }
+
+  @media (max-width: 1120px) {
+
+    .card-grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .workPageCard {
+      max-width: 650px;
+      min-width: 0;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      aspect-ratio: 542 / 450 !important;
+    }
+  }
+
+  @media (min-width:320px) and (max-width: 450px) {
+    .cardTitle {
+       font-size: calc(4.5vw);
+    }
+
+    .cardText {
+      font-size: calc(3.5vw);
+   }
+
+   #cardDescription {
+      top: calc(5vw);
+   }
+  }
+
+  @media (max-width:410px) {
+    .cardTitle {
+       font-size: 18.3px;
+    }
+
+    .cardText {
+      font-size: 14.2px;
+   }
+  }
