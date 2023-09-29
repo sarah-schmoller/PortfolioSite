@@ -215,6 +215,41 @@ function HomePage() {
         </div>
       </div>
 
+      {/* CONTACT PAGE */}
+      <div id="contactPage">
+        <div id="contactPageContainer">
+          <div id="contactPageTitleDiv">
+            <div id="contactPageTitle" className="titleText"><span>Contact</span></div>
+          </div>
+          <form action="https://formspree.io/f/mdkeogpv" method="POST">
+            <div class="contactPageForm">
+              <div class="contactPageHalfField">
+                <input type="text" name="name" id="contactPageNameField" class="contactPageFormControl" placeholder="Name"></input>
+              </div>
+              <div class="contactPageHalfField">
+                <input type="email" name="email" id="contactPageEmailField" class="contactPageFormControl" placeholder="Email"></input>
+              </div>
+              <div class="contactPageFullField">
+                <textarea name="message" id="message" rows="5" class="contactPageFormControl" placeholder="Message"></textarea>
+              </div>
+              <button class="contactPageSubmitButton" type="submit" label="Send Message">Send Message</button>
+            </div>
+          </form>
+          <div id="contactPageFooter">
+            <svg class="contactPageSvgArc" viewBox="0 0 1440 114" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 114C0 114 218.416 0 693.5 0C1168.58 0 1440 114 1440 114H0Z"></path>
+            </svg>
+            <div id="contactPageFooterButtonDiv">
+              <a id="contactPageGithubLink" href="https://github.com/sarah-schmoller"><img src="./githubIcon.png"/></a>
+              <a id="contactPageLinkedInLink" href="https://www.linkedin.com/in/sarah-schmoller"><img src="./linkedInIcon.png"/></a>
+              <a id="contactPageMailLink" href="mailto:sarah.schmoller@gmail.com"><img src="./mailIcon.png"/></a>
+            </div>
+            <div id="contactPageCopyright"><span>©2023 Sarah Schmoller. All rights reserved.</span></div>
+          </div>
+        </div>
+      </div>
+      <div id="pageFooter"></div>
+
     </body>
   );
 }
