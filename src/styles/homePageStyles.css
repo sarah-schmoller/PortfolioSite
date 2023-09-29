@@ -824,3 +824,73 @@
     bottom:0;
     background: none;
   }
+
+  /* SHARED STYLES */
+
+  .svgWhiteTab {
+    display: block;
+    height: auto;
+    left: 50%;
+    margin: 0 auto;
+    max-height: 57px;
+    min-width: 1072px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 100;
+  }
+
+  .svgWhiteTab path {
+    position: absolute;
+    left: 0;
+    fill: white;
+    width: 100vw;
+    overflow: hidden;
+    min-width: 426px;
+  }
+
+  .titleText {
+    color: rgb(142, 176, 227);
+    font-family: "Roboto Mono", monospace !important;
+    font-size: 17px;
+    z-index:10;
+  }
+
+  .paragraphText {
+    color: #7a839c;
+    font-size: 18px;
+    z-index:10;
+  }
+  
+  :root {
+    --nav-scroll-height: 60px;
+    --nav-stay-position: 10px;
+    background: #22282e;
+  }
+
+  
+  .staticPosition {
+    position: static;
+  }
+
+  .stickyPosition {
+    position: sticky;
+  }
+  
+  html {
+    background: #171b22;
+    overscroll-behavior: contain;
+  }
+  
+  #contactPageTitleDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+  }
+  
+  #companyName {
+    transform: rotate(-90deg);
+    z-index: 100;
+    color: white;
+  }
