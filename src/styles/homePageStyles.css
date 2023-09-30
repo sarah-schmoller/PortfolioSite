@@ -894,3 +894,12 @@
     z-index: 100;
     color: white;
   }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(18px);
+    }
+    50% {
+      transform: translateY(12px);
+    }
+  }
