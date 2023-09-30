@@ -10,6 +10,105 @@
   }
 
 
+/* HEADER */
+
+  /* Wrapper div for the entire header bar and its components */
+  #headerWrapper {
+    height: 100px;
+    left: 0;
+    opacity: 100;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 300;
+  }
+
+  /* Header class governing the inner contents of the header */
+  .header {
+    align-items: center;
+    backdrop-filter: blur(2px);
+    background: transparent;
+    counter-reset: item 0;
+    height: 65px;
+    padding: 5px 0px;
+    pointer-events: auto !important;
+    user-select: auto !important;
+    -webkit-backdrop-filter: blur(2px);
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Class to be added to hide the inner contents of the header under certain conditions */
+  .hiddenHeader {
+    position: fixed;
+    transition: transform 0.3s ease-out, opacity 0.1s ease-out 0.1s;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  /* Class to be added to make the inner contents of the header visible */
+  .visibleHeader {
+    position: fixed;
+    top: 0px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+  }
+
+  /* Class to be added if the header has been retracted (on the intro page) */
+  .retractedHeader {
+    position: absolute;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+  }
+
+  /* List containing all navigation buttons in the header */
+  #headerButtonList {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    width: 100%;
+  }
+
+  /* Class responsible for left-aligning selected buttons in the header */
+  .alignLeft {
+    align-items: center;
+    display: flex;
+  }
+
+  /* Class responsible for right-aligning selected buttons in the header */
+  .alignRight {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Class formatting the buttons in the header */
+  .headerButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+
+  /* Class to ensure that header buttons are invisible if the header is retracted */
+  .retractedHeaderButton {
+    opacity: 0;
+  }
+
+  /* Class formatting the display images for buttons in the header */
+  .headerButtonImage {
+    cursor: pointer;
+    height: 35px;
+    transition: transform 0.4s ease-out, opacity 0.4s ease;
+    width: 35px;
+  }
+
+
 /* INTRO PAGE */
 
   /* Overarching styles for the intro page */
