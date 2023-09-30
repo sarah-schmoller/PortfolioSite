@@ -32,6 +32,37 @@ function HomePage() {
     <body id='body'>
       <div id='canvas'></div>
 
+      {/* HEADER */}
+      <div id='headerWrapper'>
+        <div id='header' class='header hiddenHeader'>
+          <nav id='headerButtonNav'>
+            <div id='headerButtonDiv'>
+              <ol id='headerButtonList'>
+                <div class='alignLeft'>
+                  <a class='headerButton' href='.'>
+                    <img class='headerButtonImage' id='headerHomeButton' src='./homeButton.png' alt='Home' />
+                  </a>
+                </div>
+                <div class='alignRight'>
+                  <a class='headerButton' href='#aboutPage'>
+                    <img class='headerButtonImage' src='./aboutButton.png' alt='About' />
+                  </a>
+                  <a class='headerButton' href='#workPageContainer'>
+                    <img class='headerButtonImage' src='./workButton.png' alt='Work' />
+                  </a>
+                  <a class='headerButton' href='#pageFooter'>
+                    <img class='headerButtonImage' src='./contactButton.png' alt='Contact' />
+                  </a>
+                  <a class='headerButton' href='#resumePage'>
+                    <img class='headerButtonImage' src='./resumeButton.png' alt='Resume' />
+                  </a>
+                </div>
+              </ol>
+            </div>
+          </nav>
+        </div>
+      </div>
+
       {/* INTRO PAGE */}
       <div id="introPage">
         <div id="laptopLayoutContainer">
