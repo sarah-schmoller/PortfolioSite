@@ -63,6 +63,42 @@ function HomePage() {
         </div>
       </div>
 
+
+      {/* HEADER MOBILE */}
+      <div id="outerHeaderMobile">
+        <div id="headerMobile" class="innerHeaderMobile hiddenHeader">
+          <nav id="buttonNav">
+            <nav id="buttonDiv">
+              <ol id="              let header = document.getElementById('header');
+              // ...
+              if (!header.classList.contains('visibleHeader')) {
+                header.classList.toggle('visibleHeader');
+              }">
+                <div class="alignRight">
+                <label for="menuToggle" id="menuIcon">
+                  <img class="homeButtonHeader" id="homeButtonHeaderRight" src="./hamburgerMenu.png" alt="Menu" />
+                </label>
+                </div>
+              </ol>
+            </nav>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <input type="checkbox" id="menuToggle" class="menuToggle" hidden />
+        <div id="dropdownMenu" class="dropdown-content">
+          <label for="menuToggle" class="closeMenu">
+            <span>&#215;</span>
+          </label>
+          <a class="list" href="."><span>Home</span></a>
+          <a class="list" href="#aboutPage"><span>About</span></a>
+          <a class="list" href="#workPage"><span>Work</span></a>
+          <a class="list" href="#contactPage"><span>Contact</span></a>
+          <a class="list" href="#resumePage"><span>Resume</span></a>
+        </div>
+      </div>
+
+
       {/* INTRO PAGE */}
       <div id="introPage">
         <div id="laptopLayoutContainer">
