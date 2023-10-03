@@ -26,6 +26,129 @@ function HomePage() {
     });
 
 
+// STANDARD HANDLING HELPER FUNCTIONS
+
+  // Handling to take place during scroll events
+  function scrollEffect(lastScrollY, body, header, introPage, laptopButtonContainer, headerButtons) {
+
+    const laptopButtonPosition = getDistanceFromTop(laptopButtonContainer);
+    const bodyWidth = body.getBoundingClientRect().width;
+
+    function getDistanceFromTop(element) {
+      const rect = element.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      return rect.top + scrollTop;
+    }
+
+    let laptopButton = laptopButtonContainer.children[0];
+    let transitionEnd;
+    let translateX, targetPositionY, scale;
+
+    const currentScrollY = window.pageYOffset;
+
+    // In the case that we are scrolling up, and we're also further down than the intro page...
+    if (currentScrollY >= introPage.offsetHeight && currentScrollY < lastScrollY) {
+
+      // If the header is not visible, set it to visible
+      if (!header.classList.contains('visibleHeader')) {
+        header.classList.toggle('visibleHeader');
+      }
+
+      // Double check that the header is not set to hidden
+      if (header.classList.contains('hiddenHeader')) {
+        header.classList.toggle('hiddenHeader');
+      }
+
+      // Double check that the header is not set to retracted
+      if (header.classList.contains('retractedHeader')) {
+        header.classList.toggle('retractedHeader');
+        header.style.top = `0px`;
+      }
+      
+      // Double check that the individual buttons are not set to retracted
+      if (headerButtons[0].classList.contains('retractedHeaderButton')) {
+        headerButtons.forEach((button) => {
+          if (button.classList.contains('retractedHeaderButton')) {
+            button.classList.toggle('retractedHeaderButton');
+          }
+        })
+      }
+      
+    // In the case that we're scrolling down, and we're also further down than the intro page...
+    } else if (currentScrollY >= introPage.offsetHeight && currentScrollY > lastScrollY && currentScrollY >= 5) {
+
+      // If the header is not hidden, set it to hidden
+      if (!header.classList.contains('hiddenHeader')) {
+        header.classList.toggle('hiddenHeader');
+      }
+
+      // Double check that the header is not set to visible
+      if (header.classList.contains('visibleHeader')) {
+        header.classList.toggle('visibleHeader');
+      }
+
+      // Double check that the header is not set to retracted
+      if (header.classList.contains('retractedHeader')) {
+        header.classList.toggle('retractedHeader');
+        header.style.top = `0px`;
+      }
+
+      // Double check that the individual buttons are not set to retracted
+      if (headerButtons[0].classList.contains('retractedHeaderButton')) {
+        headerButtons.forEach((button) => {
+          if (button.classList.contains('retractedHeaderButton')) {
+            button.classList.toggle('retractedHeaderButton');
+          }
+        });
+      }
+      
+    // In the case that we've reached the intro page and the header is visible...
+    } else if (currentScrollY <= (introPage.offsetHeight * 0.7) && header.classList.contains('visibleHeader')) {
+
+      // If the header is not retracted, set it to retracted
+      if (!header.classList.contains('retractedHeader')) {
+        header.classList.toggle('retractedHeader');
+        targetPositionY = laptopButtonPosition - 25;
+        header.style.top = `${targetPositionY}px`;
+      }
+
+      // Double check that the header is not set to visible
+      if (header.classList.contains('visibleHeader')) {
+        header.classList.toggle('visibleHeader');
+      }
+
+      // Double check that the header is not set to hidden
+      if (header.classList.contains('hiddenHeader')) {
+        header.classList.toggle('hiddenHeader');
+      }
+
+      // Iterate through all the buttons in the header bar
+      headerButtons.forEach((button) => {
+
+        // Set the values we need to retract the buttons from the regular header into the nav bar on the laptop image
+        translateX = button.id == "headerHomeButton" ? (bodyWidth / 2) - 142 : -((bodyWidth / 2) - 142);
+        scale = laptopButton.getBoundingClientRect().height / headerButtons[0].height;
+
+        // If the button in question is not retracted, set it to retracted
+        if (!button.classList.contains('retractedHeaderButton')) {
+          button.classList.toggle('retractedHeaderButton');
+        }
+
+        // Apply the transformation to retract the button into the nav bar on the laptop image
+        button.style.transform = `translate(${translateX}px) scale(${scale})`;
+
+        // Get a reference to the type of transition event used by the browser for use later
+        transitionEnd = whichTransitionEvent();
+        
+      });
+
+    }
+
+    lastScrollY = currentScrollY;
+    return lastScrollY;
+  };
+
+
 // HTML FORMATTING
 
   return (
