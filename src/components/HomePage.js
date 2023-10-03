@@ -179,6 +179,53 @@ function HomePage() {
     return lastScrollY;
   };
 
+  // Handling for the typing effect in the laptop layout
+  function typeEffect() {
+    let charIndex = 0;
+    let lineIndex = 0;
+  
+    const typeChar = () => {
+      if (lineIndex < terminalTextContents.length) {
+        const currentLine = terminalTextContents[lineIndex];
+
+        const boldStart = currentLine.indexOf("SARAH SCHMOLLER");
+        const boldEnd = boldStart + "SARAH SCHMOLLER".length;
+
+        const underlineStart = currentLine.indexOf("View my work ->");
+        const underlineEnd = underlineStart + "View my work ->".length;
+  
+        if (charIndex < currentLine.length) {
+          const nextChar = currentLine[charIndex];
+  
+          setTypedTexts((prev) => {
+            const newTypedTexts = [...prev];
+            // Check if the character is in the bold range
+            if (boldStart !== -1 && charIndex >= boldStart && charIndex < boldEnd) {
+              newTypedTexts[lineIndex] += `<strong>${nextChar}</strong>`;
+            } else if (underlineStart !== -1 && charIndex >= underlineStart && charIndex < underlineEnd) {
+              newTypedTexts[lineIndex] += `<u>${nextChar}</u>`;
+            } else {
+              newTypedTexts[lineIndex] += nextChar;
+            }
+
+            return newTypedTexts;
+          });
+  
+          charIndex++;
+          let delay = lineIndex === 0 ? 70 : 1;
+          setTimeout(typeChar, delay); // Adjust typing speed (50ms delay between characters)
+        } else {
+          charIndex = 0;
+          lineIndex++;
+          let delay = lineIndex === 0 ? 300 : 80;
+          setTimeout(typeChar, delay); // Delay before starting the next line
+        }
+      }
+    };
+
+    typeChar();
+  }
+
 
 // HTML FORMATTING
 
