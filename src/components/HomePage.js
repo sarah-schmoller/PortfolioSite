@@ -142,6 +142,37 @@ function HomePage() {
         
       });
 
+      // If the header is not set to visible or to hidden...
+      if (!header.classList.contains('visibleHeader') && !header.classList.contains('hiddenHeader')) {
+
+        // After the transition animation retracting the header buttons into the nav bar is done running...
+        headerButtons[4].addEventListener(transitionEnd, () => {
+
+          // If the header is not hidden, set it to hidden
+          if (!header.classList.contains('hiddenHeader')) {
+            header.classList.toggle('hiddenHeader');
+          }
+
+          // Double check that the header is not set to visible
+          if (header.classList.contains('visibleHeader')) {
+            header.classList.toggle('visibleHeader');
+          }
+
+          // Double check that the header is not set to retracted
+          if (header.classList.contains('retractedHeader')) {
+            header.classList.toggle('retractedHeader');
+            header.style.top = `0px`;
+          }
+  
+          // Double check each of the header buttons as well, and make sure that they are no longer set to retracted
+          headerButtons.forEach((button) => {
+            button.style.transform = '';
+            if (button.classList.contains('retractedHeaderButton')) {
+              button.classList.toggle('retractedHeaderButton');
+            }
+          });
+        });
+      }
     }
 
     lastScrollY = currentScrollY;
