@@ -226,6 +226,30 @@ function HomePage() {
     typeChar();
   }
 
+  // Detect which type of transition event is used by the browser
+  function whichTransitionEvent() {
+
+    // Create a fake element with an arbitrary name
+    let el = document.createElement('fakeelement');
+
+    // Map transition property names from different vendors to the appropriate events
+    let transitions = {
+      'transition':'transitionend',
+      'OTransition':'oTransitionEnd',
+      'MozTransition':'transitionend',
+      'WebkitTransition':'webkitTransitionEnd'
+    }
+
+    // Loop through the possible transitions and check whether the browser supports each one
+    for (let t in transitions){
+      if (el.style[t] !== undefined){
+
+        // Return the first transition in the list supported by the browser
+        return transitions[t];
+      }
+    }
+  }
+
 
 // HTML FORMATTING
 
