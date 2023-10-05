@@ -297,6 +297,17 @@ function HomePage() {
     return lastScrollY;
   }
 
+  function handleMobileMenu() {
+    const menuLinks = document.querySelectorAll('.dropdown-content a');
+    const menuToggle = document.getElementById('menuToggle');
+  
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.checked = false;
+      });
+    });
+  }
+
 
 // HTML FORMATTING
 
