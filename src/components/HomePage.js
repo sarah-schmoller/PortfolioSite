@@ -260,6 +260,44 @@ function HomePage() {
   }
 
 
+  // Handling to take place during scroll events on mobile devices
+  function scrollEffectMobile(lastScrollY, header) {
+    
+    const currentScrollY = window.pageYOffset;
+
+    // In the case that we are scrolling up, and we're also further down than the intro page...
+    if (currentScrollY < lastScrollY) {
+
+      // If the header is not visible, set it to visible
+      if (!header.classList.contains('visibleHeader')) {
+        header.classList.toggle('visibleHeader');
+      }
+
+      // Double check that the header is not set to hidden
+      if (header.classList.contains('hiddenHeader')) {
+        header.classList.toggle('hiddenHeader');
+      }
+      
+    // 
+    } else if (currentScrollY > lastScrollY) {
+
+      // If the header is not hidden, set it to hidden
+      if (!header.classList.contains('hiddenHeader')) {
+        header.classList.toggle('hiddenHeader');
+      }
+
+      // Double check that the header is not set to visible
+      if (header.classList.contains('visibleHeader')) {
+        header.classList.toggle('visibleHeader');
+      }
+
+    }
+
+    lastScrollY = currentScrollY;
+    return lastScrollY;
+  }
+
+
 // HTML FORMATTING
 
   return (
