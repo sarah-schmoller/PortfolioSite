@@ -250,7 +250,8 @@ function HomePage() {
     }
   }
 
-
+  
+// MOBILE HANDLING HELPER FUNCTIONS
 
   // Helper function to detect mobile device use
   function isMobile() {
