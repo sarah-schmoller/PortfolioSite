@@ -308,6 +308,16 @@ function HomePage() {
     });
   }
 
+  // Update the time display on the intro page for mobile devices
+  function updateTime() {
+    const currentTime = new Date();
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const formattedTime = `${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+    
+    return formattedTime;
+  }
+
 
 // HTML FORMATTING
 
