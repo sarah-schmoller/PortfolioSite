@@ -26,6 +26,127 @@ function HomePage() {
     });
 
 
+
+// ON-LOAD EFFECTS
+
+  // Handle header display settings on scroll
+  useEffect(() => {
+
+    document.getElementById("currentTime").textContent = updateTime();
+    let header = document.getElementById('headerWrapper');
+    let headerMobile = document.getElementById('outerHeaderMobile');
+
+    let introPage = document.getElementById('introPage');
+    let introPageMobile = document.getElementById('introPageMobile');
+
+    let contactPage = document.getElementById('contactPage');
+    let lastScrollY = window.scrollY;
+
+    isMobile = false;
+    if (isMobile) {
+
+      handleMobileMenu()
+
+      let innerHeader = document.getElementById('headerMobile');
+  
+      if (!introPage.classList.contains('noDisplay')) {
+        introPage.classList.toggle('noDisplay');
+      }
+  
+      if (introPageMobile.classList.contains('noDisplay')) {
+        introPageMobile.classList.toggle('noDisplay');
+      }
+
+      if (!header.classList.contains('noDisplay')) {
+        header.classList.toggle('noDisplay');
+      }
+  
+      if (headerMobile.classList.contains('noDisplay')) {
+        headerMobile.classList.toggle('noDisplay');
+      }
+
+      if (!contactPage.classList.contains('staticPosition')) {
+        contactPage.classList.toggle('staticPosition');
+      }
+
+      if (contactPage.classList.contains('stickyPosition')) {
+        contactPage.classList.toggle('stickyPosition');
+      }
+
+      const messageContainer = document.getElementById('mobileLayoutMessageContainerLink');
+
+      if (messageContainer) {
+
+        messageContainer.addEventListener('click', (event) => {
+
+          messageContainer.classList.toggle('highlight');
+
+          setTimeout(() => {
+            messageContainer.classList.toggle('highlight');
+          }, 500);
+        });
+      }
+
+      window.addEventListener('scroll', function() {
+        lastScrollY = scrollEffectMobile(lastScrollY, innerHeader);
+      });
+  
+      return () => {
+        window.removeEventListener('scroll', function() {
+          lastScrollY = scrollEffectMobile(lastScrollY, innerHeader);
+        });
+      };
+  
+    } else {
+
+      let innerHeader = document.getElementById('header');
+      
+      if (!introPageMobile.classList.contains('noDisplay')) {
+        introPageMobile.classList.toggle('noDisplay');
+      }
+  
+      if (introPage.classList.contains('noDisplay')) {
+        introPage.classList.toggle('noDisplay');
+      }
+
+      if (!headerMobile.classList.contains('noDisplay')) {
+        headerMobile.classList.toggle('noDisplay');
+      }
+  
+      if (header.classList.contains('noDisplay')) {
+        header.classList.toggle('noDisplay');
+      }
+
+      if (contactPage.classList.contains('staticPosition')) {
+        contactPage.classList.toggle('staticPosition');
+      }
+
+      if (!contactPage.classList.contains('stickyPosition')) {
+        contactPage.classList.toggle('stickyPosition');
+      }
+
+      typeEffect();
+
+      const body = document.getElementById('body');
+      
+      const laptopButtonContainer = document.getElementById('laptopLayoutButtonContainer');
+      const headerButtons = document.querySelectorAll('.headerButton img');
+
+      window.addEventListener('scroll', function() {
+        lastScrollY = scrollEffect(lastScrollY, body, innerHeader, introPage, laptopButtonContainer, headerButtons);//, body, innerHeader, introPage, laptopButtonContainer, headerButtons);
+      });
+  
+      return () => {
+        window.removeEventListener('scroll', function() {
+          lastScrollY = scrollEffect(lastScrollY, body, innerHeader, introPage, laptopButtonContainer, headerButtons);//, body, innerHeader, introPage, laptopButtonContainer, headerButtons);
+        });
+      };
+  
+    }
+  }, []);
+  
+
+
 // STANDARD HANDLING HELPER FUNCTIONS
 
   // Handling to take place during scroll events
@@ -179,6 +300,7 @@ function HomePage() {
     return lastScrollY;
   };
 
+
   // Handling for the typing effect in the laptop layout
   function typeEffect() {
     let charIndex = 0;
@@ -226,6 +348,7 @@ function HomePage() {
     typeChar();
   }
 
+
   // Detect which type of transition event is used by the browser
   function whichTransitionEvent() {
 
@@ -250,7 +373,8 @@ function HomePage() {
     }
   }
 
-  
+
+
 // MOBILE HANDLING HELPER FUNCTIONS
 
   // Helper function to detect mobile device use
@@ -296,6 +420,7 @@ function HomePage() {
 
     lastScrollY = currentScrollY;
     return lastScrollY;
+
   }
 
   function handleMobileMenu() {
@@ -308,6 +433,7 @@ function HomePage() {
       });
     });
   }
+  
 
   // Update the time display on the intro page for mobile devices
   function updateTime() {
@@ -320,11 +446,13 @@ function HomePage() {
   }
 
 
+
 // HTML FORMATTING
 
   return (
     <body id='body'>
       <div id='canvas'></div>
+
 
       {/* HEADER */}
       <div id='headerWrapper'>
@@ -500,6 +628,7 @@ function HomePage() {
         </div>
       </div>
 
+
       {/* WORK PAGE */}
       <div id="workPage">
         <svg class="svgWhiteTab" id="workPageTab" viewBox="0 0 1440 57" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
@@ -610,7 +739,6 @@ function HomePage() {
         </div>
       </div>
       <div id="pageFooter"></div>
-
     </body>
   );
 }
