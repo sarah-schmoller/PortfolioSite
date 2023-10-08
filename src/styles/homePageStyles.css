@@ -374,6 +374,188 @@
     display: none;
   }
 
+
+/* MOBILE INTRO PAGE */
+
+  /* Alternate styles for the intro page on mobile devices */
+  #introPageMobile {
+    background: #171b22;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    min-height: 600px;
+    z-index: 100;
+    align-items:center;
+    justify-content: center;
+  }
+
+  #mobileLayoutContainer {
+    height: 350px;
+    width: 100vw;
+    max-width: 500px;
+    min-width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: block;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #mobileLayoutMessageContainer {
+    height: 62px;
+    width: calc(100% - 30px);
+    max-width: 500px;
+    top: 230px;
+    padding-top:0px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #mobileLayoutMessageContainerLink {
+    padding-top:15px;
+    padding-bottom:10px;
+    min-width: 300px;
+    left: 0;
+  }
+
+  .highlight {
+    background-color: rgba(190, 190, 190, 0.453);
+    transition: background-color 0s ease;
+  }
+
+  .horizontalLine {
+    height: 0.5px;
+    background-color: rgba(214, 214, 214, 0.372);
+    width: calc(100% - 30px);
+    top: 230px;
+    position: absolute;
+  }
+
+  #profileImage {
+    height: 75px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  #profileImageMessage {
+    height: 60px;
+    width: 60px;
+    margin-left: 5px;
+    object-fit: cover;
+  }
+
+  #profileAndTextWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  #mobileLayoutTitle {
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+    top: 77px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 185px;
+  }
+
+  #mobileLayoutMessageContainer a {
+    text-decoration: none;
+  }
+
+  #mobileLayoutMessageContainerLink {
+    text-decoration: none;
+  }
+
+  #senderName {
+    font-weight: bold;
+    color: white;
+    font-size: 0.9em;
+  }
+
+  #timestamp {
+    width: 45px;
+    position: absolute;
+    color: rgb(214, 214, 214);
+    font-size: 0.9em;
+    font-size: 0.9em;
+    right: 0%;
+    top:14px;
+  }
+
+  #label {
+    top: 205px;
+    font-weight: bold;
+    color: rgb(214, 214, 214);
+    font-size: 0.82em;
+    position: absolute;
+  }
+
+  .messageWrapper {
+    display: block;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  #mobileLayoutButtonContainer {
+    display: flex;
+    gap: 10%;
+    height: 45px;
+    width: 260px;
+    left: 50%;
+    margin: 0;
+    top:135px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .mobileButton {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .mobileButton img {
+    height: 100%;
+    width: auto;
+  }
+
+  .closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    z-index: 1001;
+  }
+  
+  .closeMenu span {
+    font-size: 40px;
+    font-weight: bold;
+    color: white !important;
+    font-family: Arial, sans-serif;
+    top: -20px;
+    right: -2px;
+    position: absolute;
+  }
+  
+
 /* ABOUT PAGE */
 
   #aboutPage {
