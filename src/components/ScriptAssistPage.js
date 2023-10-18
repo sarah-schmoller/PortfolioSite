@@ -41,6 +41,12 @@ function ScriptAssist() {
               <span>To achieve this, I designed a simple Python application which generated dialog on the basis of customized context blocks. For the purposes of the prototype, I used the writing styles of famous authors as a stand-in for personality. I would take a dialog excerpt from each author’s writings and save it in a text file. As the user authored additional turns, they would be appended to this existing context file. This would be passed in with the call to GPT-2, which would then take both the provided style and the subsequent user-authored turns into account when generating the next turn of text, ensuring that the text was both stylistically appropriate and relevant. I built out a simple React frontend to allow non-developers to interact with the system.
               </span>
             </div>
+            <div className="projectDescription">
+              <span>The code for my finished prototype can be found <a href="https://github.com/sarah-schmoller/ScriptAssist" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>
+                  here
+                </a>.
+              </span>
+            </div>
           </div>
         </div>
       </div>
