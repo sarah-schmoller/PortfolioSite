@@ -37,6 +37,10 @@ function ScriptAssist() {
               <span>While this kind of system is fairly commonplace today, it was a very novel and exciting concept in 2020 when we were first investigating uses for these models. Our hope was that the completed tool would not only allow users to auto-generate turns of dialog throughout the writing process, but also to generate turns within a specific designated personality type.
               </span>
             </div>
+            <div className="projectDescription">
+              <span>To achieve this, I designed a simple Python application which generated dialog on the basis of customized context blocks. For the purposes of the prototype, I used the writing styles of famous authors as a stand-in for personality. I would take a dialog excerpt from each author’s writings and save it in a text file. As the user authored additional turns, they would be appended to this existing context file. This would be passed in with the call to GPT-2, which would then take both the provided style and the subsequent user-authored turns into account when generating the next turn of text, ensuring that the text was both stylistically appropriate and relevant. I built out a simple React frontend to allow non-developers to interact with the system.
+              </span>
+            </div>
           </div>
         </div>
       </div>
