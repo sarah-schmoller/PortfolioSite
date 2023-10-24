@@ -23,6 +23,10 @@ function MarketWatchOnAlexa() {
           </div>
           <div className="projectDescriptionContainer">
             <img className="watchlistRecapImage" src="./watchlistRecapImage.png" alt="A.I. Story"/>
+              <div className="projectDescription">
+                <span>MarketWatch.com’s watchlist feature is an established offering for individual site users, allowing them to log in and define personalized lists of instruments they wish to keep track of. In 2022, I was asked to lead development on the backend for a weekly recap addition extending watchlist functionality by providing customers with more detailed insights. The recap would include graphs and other graphics summarizing important aspects of a watchlist's performance, along with a text summary which could be played aloud as a sound bite.
+                </span>
+            </div>
           </div>
         </div>
       </div>
