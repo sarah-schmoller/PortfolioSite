@@ -31,6 +31,10 @@ function MarketWatchOnAlexa() {
                 <span>These watchlist recaps served as an early foray into developing a robust system for branching in-house text generation.  Shorter captions are generated via simple conditional logic, but I also designed a templated narrative-generation prototype to produce a more complex paragraph overview. This is provided alongside an audio reading performed by Amazon Polly. I discuss in-house narrative generation further in my summary of the AI Authoring Engine project.
                 </span>
             </div>
+            <div className="projectDescription">
+                <span>The system architecture I designed encompassed not only the rules-engine AI logic for narrative generation, but also substantial infrastructure for management of instrument data. It was essential to consider the impact of a large number of users accessing the recaps at the same time; if unique real-time stock data was provided for each user upon visiting, internal APIs could easily be overloaded. For that reason, I settled on a snapshot design, in which a lambda job is run weekly to store new company information in Amazon’s DynamoDB. This strategy has ensured that the system is scalable to an infinite number of users, without concern for downstream capacity limits. Both data and text elements are surfaced via apis built on AWS lambdas.
+                </span>
+            </div>
           </div>
         </div>
       </div>
