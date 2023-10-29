@@ -28,6 +28,12 @@ function MarketWatchOnAlexa() {
                   </a>.
                 </span>
             </div>
+            <div id="alexaSkillImageContainer">
+              <img className="alexaSkillImage" src="./alexaTopGainersImage.png" alt="A.I. Story"/>
+              <img className="alexaSkillImage" src="./alexaVolumeImage.png" alt="A.I. Story"/>
+              <img className="alexaSkillImage" src="./alexaSummaryImage.png" alt="A.I. Story"/>
+              <img className="alexaSkillImage" src="./alexaRangeImage.png" alt="A.I. Story"/>
+            </div>
           </div>
         </div>
       </div>
