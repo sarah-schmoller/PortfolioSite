@@ -37,6 +37,7 @@ function MarketWatchOnAlexa() {
               <span>The backend system I designed was built on AWS lambda, as a series of API endpoints. Each endpoint represented a different type of narrative, with distinct data processing required prior to text generation. For example, one endpoint took in a ticker symbol and narrative topic (price range, volume, etc.) as parameters and would return a short narrative on the single instrument specified. Another reported on a list of top or bottom performers within a given index. Used in combination, these API calls produced a coherent narrative through which users could navigate, as seen above. 
               </span>
             </div>
+            <img className="alexaSkillImage" id="alexaSkillStoreImage"src="./alexaSkillStoreImage.png" alt="A.I. Story"/>
             <div className="projectDescription">
               <span>The language generation work done over the course of this project served as a foundation for much of my later development of robust AI authoring systems. The MarketWatch on Alexa skill was publicly available on the Amazon storefront until the start of 2024.
               </span>
