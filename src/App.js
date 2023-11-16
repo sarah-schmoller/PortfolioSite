@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import HomePage from './components/HomePage';
 import ScriptAssist from './components/ScriptAssistPage';
+import WatchlistRecaps from './components/WatchlistRecapsPage';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
             <Route path="/" element={<HomePage />}>
             </Route>
             <Route path="/script-assist" element={<ScriptAssist />}>
+            </Route>
+            <Route path="/watchlist-recaps" element={<WatchlistRecaps />}>
             </Route>
           </Routes>
 
