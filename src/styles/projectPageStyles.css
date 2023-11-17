@@ -1,0 +1,54 @@
+/* PROJECT PAGE */
+
+#projectPage {
+  background: #171b22;
+  height: 100vh;
+  min-height: 750px;
+  overflow: scroll;
+  width: 100vw;
+  z-index: 100;
+}
+
+#projectPageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 100px; /* or adjust as needed */
+}
+
+.projectPageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px; /* Add this line for top padding */
+  /* Remove or adjust 'top: 100px;' if present to avoid double spacing */
+}
+
+.projectDescriptionContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  /* Optional: add padding if you want space around */
+  padding: 0 16px;
+  /* No flex here, let float do the work */
+  overflow: hidden; /* ensures container wraps floated content */
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.aiStoryImage {
+  float: right;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-left: 24px;
+  margin-bottom: 12px;
+  border: 1px solid rgb(255, 255, 255);
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
