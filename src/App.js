@@ -22,6 +22,8 @@ function App() {
             </Route>
             <Route path="/marketwatch-on-alexa" element={<MarketWatchOnAlexa />}>
             </Route>
+            <Route path="/automated-publishing" element={<AutomatedPublishing />}>
+            </Route>
           </Routes>
 
       </div>
