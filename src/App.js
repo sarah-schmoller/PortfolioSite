@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './components/HomePage';
 import ScriptAssist from './components/ScriptAssistPage';
 import WatchlistRecaps from './components/WatchlistRecapsPage';
+import MarketWatchOnAlexa from './components/MarketWatchOnAlexaPage';
+import AutomatedPublishing from './components/AutomatedPublishingPage';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
