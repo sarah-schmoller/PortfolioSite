@@ -53,6 +53,7 @@
   flex-shrink: 0;
 }
 
+
 /* Responsive adjustments */
 @media (max-width: 800px) {
   .descriptionFlexWrap {

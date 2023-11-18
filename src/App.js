@@ -20,6 +20,8 @@ function App() {
             </Route>
             <Route path="/watchlist-recaps" element={<WatchlistRecaps />}>
             </Route>
+            <Route path="/marketwatch-on-alexa" element={<MarketWatchOnAlexa />}>
+            </Route>
           </Routes>
 
       </div>
