@@ -53,6 +53,127 @@
   flex-shrink: 0;
 }
 
+.watchlistRecapImage {
+  float: right;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-left: 24px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  border: 1px solid rgb(255, 255, 255);
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.scriptAssistImage {
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: 1px solid rgb(255, 255, 255);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+
+.alexaSkillImage {
+  float: right;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-left: 24px;
+  margin-bottom: 30px;
+  /* margin-top: 4px; Optional: tweak as needed */
+}
+
+#alexaSkillStoreImage {
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 15px;
+}
+
+#projectTitle {
+  color: rgb(142, 176, 227);
+  font-family: "Roboto Mono", monospace !important;
+  font-size: 28px;
+  z-index: 10;
+  font-weight: 600;
+  margin-bottom: 25px;
+  /* Remove absolute positioning */
+  position: static;
+  top: unset;
+  text-align: center;
+  width: 100%;
+}
+
+#projectTitleImage {
+  display: block;
+  margin: 0 auto 16px auto; /* centers the image horizontally and adds bottom margin */
+  height: 150px;
+  position: static;
+  left: unset;
+  transform: none;
+}
+
+/* New flex container for description and image */
+.descriptionFlexWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px; /* Adjust as needed to clear title image */
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 10;
+}
+
+#projectDescription {
+  color: rgba(255, 255, 255, .75);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.75;
+  text-align: justify;
+  margin-right: 30px;
+  margin-left: 0;
+  margin-top: 0;
+  position: static;
+  flex: 2 1 0;
+  min-width: 0;
+}
+
+.projectDescription {
+  color: rgba(255, 255, 255, .75);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.75;
+  text-align: justify;
+  padding-bottom: 16px;
+  /* No flex here */
+}
+
+#alexaSkillImageContainer {
+  margin-top: 25px;
+}
+
+.homeButtonProjectPage {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  display: block;
+}
+.homeButtonProjectPage img {
+  width: 55px;
+  height: 55px;
+
+}
 
 /* Responsive adjustments */
 @media (max-width: 800px) {
