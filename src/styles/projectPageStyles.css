@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 100px; /* or adjust as needed */
+  top: 100px;
 }
 
 .projectPageContainer {
@@ -22,18 +22,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 80px; /* Add this line for top padding */
-  /* Remove or adjust 'top: 100px;' if present to avoid double spacing */
+  padding-top: 80px;
 }
 
 .projectDescriptionContainer {
   max-width: 900px;
   margin: 0 auto;
   width: 100%;
-  /* Optional: add padding if you want space around */
   padding: 0 16px;
-  /* No flex here, let float do the work */
-  overflow: hidden; /* ensures container wraps floated content */
+  overflow: hidden;
   padding-top: 40px;
   padding-bottom: 50px;
 }
@@ -91,7 +88,6 @@
   object-fit: cover;
   margin-left: 24px;
   margin-bottom: 30px;
-  /* margin-top: 4px; Optional: tweak as needed */
 }
 
 #alexaSkillStoreImage {
@@ -106,7 +102,6 @@
   z-index: 10;
   font-weight: 600;
   margin-bottom: 25px;
-  /* Remove absolute positioning */
   position: static;
   top: unset;
   text-align: center;
@@ -115,19 +110,18 @@
 
 #projectTitleImage {
   display: block;
-  margin: 0 auto 16px auto; /* centers the image horizontally and adds bottom margin */
+  margin: 0 auto 16px auto;
   height: 150px;
   position: static;
   left: unset;
   transform: none;
 }
 
-/* New flex container for description and image */
 .descriptionFlexWrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px; /* Adjust as needed to clear title image */
+  margin-top: 200px;
   width: 100%;
   max-width: 900px;
   position: relative;
@@ -155,7 +149,6 @@
   line-height: 1.75;
   text-align: justify;
   padding-bottom: 16px;
-  /* No flex here */
 }
 
 #alexaSkillImageContainer {
@@ -175,7 +168,6 @@
 
 }
 
-/* Responsive adjustments */
 @media (max-width: 800px) {
   .descriptionFlexWrap {
     flex-direction: column;
@@ -232,7 +224,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center; /* Center the tiles */
+  justify-content: center;
 }
 
 .techTile {
