@@ -10,44 +10,41 @@
 }
 
 #projectPageContainer {
-  position: relative;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  position: relative;
   top: 100px;
 }
 
 .projectPageContainer {
-  position: relative;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 80px;
+  position: relative;
 }
 
 .projectDescriptionContainer {
-  max-width: 900px;
   margin: 0 auto;
-  width: 100%;
-  padding: 0 16px;
+  max-width: 900px;
   overflow: hidden;
-  padding-top: 40px;
+  padding: 0 16px;
   padding-bottom: 50px;
+  padding-top: 40px;
+  width: 100%;
 }
 
 .aiStoryImage {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  flex-shrink: 0;
   float: right;
   height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  margin-left: 24px;
   margin-bottom: 12px;
-  border: 1px solid rgb(255, 255, 255);
-  width: 400px;
-  height: auto;
-  border-radius: 8px;
+  margin-left: 24px;
   object-fit: cover;
-  flex-shrink: 0;
+  width: 400px;
 }
 
 .watchlistRecapImage {
