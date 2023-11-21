@@ -7,6 +7,7 @@ import ScriptAssist from './components/ScriptAssistPage';
 import WatchlistRecaps from './components/WatchlistRecapsPage';
 import MarketWatchOnAlexa from './components/MarketWatchOnAlexaPage';
 import AutomatedPublishing from './components/AutomatedPublishingPage';
+import Protected from './components/AiAuthoringEnginePage';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
             <Route path="/marketwatch-on-alexa" element={<MarketWatchOnAlexa />}>
             </Route>
             <Route path="/automated-publishing" element={<AutomatedPublishing />}>
+            </Route>
+            <Route path="./protected" element={<Protected />}>
             </Route>
           </Routes>
 
