@@ -26,12 +26,56 @@ function HomePage() {
       return initialTexts;
     });
 
+    const [isReady, setIsReady] = useState(false);
+    const imagesToPreload = [
+      './homeButton.png',
+      './aboutButton.png',
+      './workButton.png',
+      './contactButton.png',
+      './resumeButton.png',
+      './hamburgerMenu.png',
+      './introImage.png',
+      './profileImage.png',
+      './profileImageMessage.png',
+      './aboutImage.png',
+      './engineCoverImage.jpg',
+      './aiPublishingCoverImage.jpg',
+      './alexaCoverImage.jpg',
+      './watchlistRecapCoverImage.jpg',
+      './scriptAssistCoverImage.jpg',
+      './githubIcon.png',
+      './linkedInIcon.png',
+      './mailIcon.png'
+    ];
 
 
 // ON-LOAD EFFECTS
 
+  useEffect(() => {
+    let loadedCount = 0;
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === imagesToPreload.length) setIsReady(true);
+      };
+
+      img.onerror = () => {
+        console.error('Failed to load:', src);
+        loadedCount++;
+        if (loadedCount === imagesToPreload.length) setIsReady(true);
+      };
+    });
+  }, []);
+
+
   // Handle header display settings on scroll
   useEffect(() => {
+
+    if (!isReady) return;
 
     document.getElementById("currentTime").textContent = updateTime();
     let header = document.getElementById('headerWrapper');
@@ -164,7 +208,7 @@ function HomePage() {
     };
   
     }
-  }, []);
+  }, [isReady]);
   
 
 
@@ -466,7 +510,13 @@ function HomePage() {
     return formattedTime;
   }
 
-
+  
+  if (!isReady) {
+    return (
+      <div className="loadingScreen">
+      </div>
+    );
+  }
 
 // HTML FORMATTING
 
